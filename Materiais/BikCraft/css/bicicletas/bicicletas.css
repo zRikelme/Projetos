@@ -1,0 +1,103 @@
+    .bicicletas-bg {
+        background: var(--cor-11);
+        background: linear-gradient(to right, white 30%, black 0%);
+    }
+
+    .bicicletas {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        padding: 60px 0px;
+        background: url(../../img/dec/top-right.svg) no-repeat top 40px right 20px;
+    }
+
+    .bicicletas-imagem {
+        position: relative;
+    }
+
+    .bicicletas-imagem span{
+        background: var(--cor-12);
+        display: inline-block;
+        padding: 8px 16px 8px 8px;
+        position: absolute;
+        top: 20px;
+        right: 0px;
+        border-radius: 4px 0px 0px 4px;
+    }
+
+    .bicicletas-conteudo {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-content: start;
+    }
+
+    .bicicletas-conteudo h2,
+    .bicicletas-conteudo p {
+        grid-column: 1/-1;
+    }
+
+    .bicicletas-conteudo h2{
+        margin-bottom: 20px;
+    }
+
+    .bicicletas-conteudo h2::before {
+        content: '';
+        display: block;
+        width: 12px;
+        height: 8px;
+        background: var(--cor-p1);
+        margin-bottom: 8px;
+    }
+
+    .bicicletas-conteudo p {
+        margin-bottom: 32px;
+    }
+
+    .bicicletas-conteudo a {
+        place-self: end;
+    }
+
+    .bicicletas-conteudo li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 16px;
+    }
+
+    .bicicletas-conteudo img {
+        width: 24px;
+    }
+
+    @media (max-width: 800px) {
+        .bicicletas-bg {
+        background: var(--cor-11);
+
+        }
+        
+        .bicicletas {
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 40px 0px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .bicicletas-conteudo {
+            padding: 20px;
+            grid-column: 1fr ;
+        }
+
+        .bicicletas ul {
+            font-size: 1rem;
+        }
+
+        .bicicletas-conteudo a {
+            place-self: end;
+            width: 300px;
+            margin-right: 20px;
+        }
+
+        .bicicletas.container {
+            padding: 20px;
+        }
+    }
